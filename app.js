@@ -58,10 +58,7 @@ app.post('/insert', async (req,res)=> {
   //connect to db,
   await client.connect();
   //point to the collection 
-  await client.db("jacob-db").collection("whatever-collection").insertOne({ fname: req.body.fname, lname: req.body.lname, email: req.body.email, 
-                                                                          street: req.body.street, city: req.body.city, state: req.body.state,
-                                                                          zip: req.body.zip, physian: req.body.physian, insurance: req.body.insurance,
-                                                                          phone: req.body.phone})
+  await client.db("jacob-db").collection("whatever-collection").insertOne({ fname: req.body.fname, lname: req.body.lname, email: req.body.email, street: req.body.street, city: req.body.city, state: req.body.state,zip: req.body.zip, physian: req.body.physian, insurance: req.body.insurance,phone: req.body.phone})
   res.redirect('/');
 
 }); 
@@ -75,9 +72,7 @@ app.post('/update/:id', async (req,res)=>{
   client.connect; 
   const collection = client.db("jacob-db").collection("whatever-collection");
   let result = await collection.findOneAndUpdate( 
-  {"_id": new ObjectId(req.params.id)}, { $set: {"fname": req.body.fname, "lname": req.body.lname, "email": req.body.email, "street": req.body.street,
-                                                "city": req.body.city, "state": req.body.state, "zip": req.body.zip, "physican": req.body.physican
-                                                "insurance": req.body.insurance, "phone": req.body.phone} }
+  {"_id": new ObjectId(req.params.id)}, { $set: {"fname": req.body.fname, "lname": req.body.lname, "email": req.body.email, "street": req.body.street, "city": req.body.city, "state": req.body.state, "zip": req.body.zip, "physican": req.body.physican, "insurance": req.body.insurance, "phone": req.body.phone} }
 )
 .then(result => {
   console.log("result", result); 
@@ -92,9 +87,7 @@ app.post('/delete/:id', async (req,res)=>{
   client.connect; 
   const collection = client.db("jacob-db").collection("whatever-collection");
   let result = await collection.findOneAndDelete( 
-  {"_id": new ObjectId(req.params.id)}, , { $set: {"fname": req.body.fname, "lname": req.body.lname, "email": req.body.email, "street": req.body.street,
-                                                "city": req.body.city, "state": req.body.state, "zip": req.body.zip, "physican": req.body.physican
-                                                "insurance": req.body.insurance, "phone": req.body.phone} }
+  {"_id": new ObjectId(req.params.id)}
   )
 .then(result => {
   console.log(result); 
