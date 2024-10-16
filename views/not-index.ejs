@@ -132,59 +132,24 @@
           <input type='text' id='phone' name='phone'>
           <br>
           <br>
-          <button type="submit">insert</button>
+          <button type="submit" class="btn btn-success">insert</button>
         </fprm>
         </form>
         </form>
-          <!-- <p>Requestor's Relationship:<br>
-            <input type="radio"
-                   class="form-check-input" 
-                   id="self" 
-                   name="relationship" 
-                   value="self">
-            <label for="self">Self</label>
-            <br>
-            <input type="radio" 
-                   class="form-check-input" 
-                   id="parent" 
-                   name="relationship" 
-                   value="parent">
-            <label for="parent">Parent</label>
-            <br>
-            <input type="radio" 
-                   class="form-check-input" 
-                   id="guardian" 
-                   name="relationship" 
-                   value="guardian">
-            <label for="guardian">Guardian</label>
-            <br>
-            <input type="radio" 
-                   class="form-check-input" 
-                   id="other" 
-                   name="relationship" 
-                   value="other">
-            <label for="other">Other</label>
-            <br> 
-            <div id="otherrelationship" style="display:none">
-              <label for="homeAddy">Please Specify</label>
-              <input type="text" id="homeAddy" name="homeAddy">
-            </div>
-          <br>
-      </div> -->
-      <!--     third column     -->
-      <div class='col-sm'>
-          <!--    buttons    -->
+        <!--    buttons    -->
           <br>
           <br>
           <input type="reset" class="btn btn-primary" value="Reset">
           <br>
           <br>
-          <button id="displayBtn" type="button" class="btn btn-success">Submit</button>
-          <br>
-          <br>
           <button id="loadBtn" type="button" class="btn btn-warning">Load Data</button>
           <br>
           <br>
+         
+          <br>
+      </div> -->
+      <!--     third column     -->
+      <div class='col-sm'>
           <p id='pg1'>
         </div>
       </div>
@@ -241,6 +206,12 @@
   document.getElementById('lname').value = '<%= pData[0].lname %>'
   document.getElementById('email').value = '<%= pData[0].email %>'
   document.getElementById('street').value = '<%= pData[0].street %>'
+  document.getElementById('city').value = '<%= pData[0].city %>'
+  document.getElementById('state').value = '<%= pData[0].state %>'
+  document.getElementById('zip').value = '<%= pData[0].zip %>'
+  document.getElementById('physican').value = '<%= pData[0].physican %>'
+  document.getElementById('insurance').value = '<%= pData[0].insurance %>'
+  document.getElementById('phone').value = '<%= pData[0].phone %>'
  
 };</script>
 </html>
