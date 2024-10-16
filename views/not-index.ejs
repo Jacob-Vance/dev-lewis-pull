@@ -33,7 +33,10 @@
         <!--   second column   -->
       
         
-          <form method="POST" action="/delete/<%= pData[0]._id%>">
+         
+      <!--    second column    -->
+      <div class='col-4'>
+        <form method="POST" action="/delete/<%= pData[0]._id%>">
         </form>
 
         <form method="POST" action="/insert">
@@ -168,109 +171,8 @@
             </div>
           <br>
       </div> -->
-      <!--    second column    -->
-      <div class='col-4'>
-        <!-- <label for='physican'>Preferred Physican (if known):</label>
-        <input type='text' id='physican' name='physican'>
-        <br>
-        <br>
-        <label for='insurance'>Patient's Insurance Carrier:</label>
-        <input type='text' id='insurance' name='insurance'>
-        <br>
-        <br>
-        <label for='phone'>Phone:</label>
-        <input type='text' id='phone' name='phone'>
-        <br>
-        <br> -->
-        <!-- <p>Best Time to Call:<br>
-          <input type="radio"
-                 class="form-check-input" 
-                 id="morning" 
-                 name="calltime" 
-                 value="morning">
-          <label for="morning">Morning (8 a.m. - 12 p.m.)</label>
-          <br>
-          <input type="radio" 
-                 class="form-check-input" 
-                 id="night" 
-                 name="calltime" 
-                 value="night">
-          <label for="night">Afternoon (12 p.m. - 5 p.m.)</label>
-          <br>
-        <p>Do you need a translator?<br>
-          <input type="radio"
-                 class="form-check-input" 
-                 id="yes" 
-                 name="translator" 
-                 value="yes">
-          <label for="yes">Yes</label>
-          <br>
-          <input type="radio" 
-                 class="form-check-input" 
-                 id="no" 
-                 name="translator" 
-                 value="no">
-          <label for="no">No</label>
-          <br>
-        <p>Patient Type:<br>
-          <input type="radio"
-                 class="form-check-input" 
-                 id="new" 
-                 name="patient" 
-                 value="new">
-          <label for="new">New Patient</label>
-          <br>
-          <input type="radio" 
-                 class="form-check-input" 
-                 id="current" 
-                 name="patient" 
-                 value="current">
-          <label for="current">Current Patient</label>
-          <br>
-        <p>Appointment Type:<br>
-          <input type="radio"
-                 class="form-check-input" 
-                 id="inoffice" 
-                 name="appointment" 
-                 value="inoffice">
-          <label for="checkup">In-office</label>
-          <br>
-          <input type="radio" 
-                 class="form-check-input" 
-                 id="telehealth" 
-                 name="appointment" 
-                 value="telehealth">
-          <label for="sick">Telehealth</label>
-          <br>
-          <input type="radio" 
-                 class="form-check-input" 
-                 id="nopref" 
-                 name="appointment" 
-                 value="nopref">
-          <label for="nopref">No Preference</label>
-          <br>
-      </div> -->
       <!--     third column     -->
       <div class='col-sm'>
-        <!-- <p>Which Procedure are you making an appointment for?<br>
-          
-          <input type="checkbox" id="cbox1" name="cbox1" value="examinatiom">
-          <label for="cbox1">Medical Examination</label><br>
-          <input type="checkbox" id="cbox2" name="cbox2" value="surgery">
-          <label for="cbox2">Surgery</label><br>
-          <input type="checkbox" id="cbox3" name="cbox3" value="consultation">
-          <label for="cbox3">Consultation</label><br>
-          <input type="checkbox" id="cbox4" name="cbox5" value="sick">
-          <label for="cbox5">Sick Visit</label><br>
-          <input type="checkbox" id="cbox5" name="cbox6" value="Results">
-          <label for="cbox6">Results Analysis</label><br>
-          <input type="checkbox" id="cbox6" name="cbox4" value="checkup">
-          <label for="cbox4">Check-up</label>
-          <br>
-          <br>
-          <label for='datetimeBox'>Requested Appointment Date:</label>
-          <input type='datetime-local' id='datetimeBox' name='datetimeBox'>
-          <br> -->
           <!--    buttons    -->
           <br>
           <br>
@@ -282,7 +184,6 @@
           <br>
           <button id="loadBtn" type="button" class="btn btn-warning">Load Data</button>
           <br>
-          <!-- button to update... -->
           <br>
           <p id='pg1'>
         </div>
