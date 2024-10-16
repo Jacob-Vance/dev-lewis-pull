@@ -31,8 +31,11 @@
     <div class='row'>
       <div class='col-sm'>
         <!--   second column   -->
-        <form method="POST" action="/update/<%= pData[0]._id%>">
-        <form method="POST" action="/delete/<%= pData[0]._id%>">
+      
+        
+          <form method="POST" action="/delete/<%= pData[0]._id%>">
+        </form>
+
         <form method="POST" action="/insert">
           <label for='fname'>First Name:</label>
           <input type="text" id= 'fname' name='fname'>
@@ -299,21 +302,26 @@
 <%
 
  })  %> -->
-    <% pData.forEach((value)=> { %>
+  
+ <% pData.forEach((value)=> { %>
 
-    <p>First Name: <%= value.fname %></p>
-    <p>Last Name: <%= value.lname %></p>
-    <p>Email: <%= value.email %></p>
-    <p>Street: <%= value.street %></p>
-    <p>City: <%= value.city %></p>
-    <p>State: <%= value.state %></p>
-    <p>Zip: <%= value.zip %></p>
-    <p>Physican: <%= value.physican %></p>
-    <p>Insurance: <%= value.insurance %></p>
-    <p>Phone: <%= value.phone %></p>
+  <form method="POST" action="/update/<%= value._id%>">>
+    First Name:<input name="fname" value="<%= value.fname %>">
+    Last Name:<input name="fname" value="<%= value.lname %>">
+    Email:<input name="fname" value="<%= value.email %>">
+    Street:<input name="fname" value="<%= value.street %>">
+    City:<input name="fname" value="<%= value.city %>">
+    State:<input name="fname" value="<%= value.state %>">
+    Zip:<input name="fname" value="<%= value.zip %>">
+    Physican:<input name="fname" value="<%= value.physican %>">
+    Insurance:<input name="fname" value="<%= value.insurance %>">
+    Phone:<input name="fname" value="<%= value.phone %>">
     <button id="updateBtn" type="submit" class="btn btn-info">Update</button>
+    </form>
+    <form method="POST" action="/delete/<%= value._id%>">
+    
     <button id="deleteBtn" type="submit" class="btn btn-danger">Delete</button>
-
+</form>
 
     <% }) %>
 
@@ -329,14 +337,9 @@
 
 <script >function loadData() {
   document.getElementById('fname').value = '<%= pData[0].fname %>'
-  document.getElementById('lname').value = '<%= pData[1].lname %>'
-  document.getElementById('email').value = '<%= pData[2].email %>'
-  document.getElementById('street').value = '<%= pData[3].street %>'
-  document.getElementById('city').value = '<%= pData[4].city %>'
-  document.getElementById('state').value = '<%= pData[5].state %>'
-  document.getElementById('zip').value = '<%= pData[6].zip %>'
-  document.getElementById('physican').value = '<%= pData[7].physican %>'
-  document.getElementById('insurance').value = '<%= pData[8].insurance %>'
-  document.getElementById('phone').value = '<%= pData[9].phone %>'
+  document.getElementById('lname').value = '<%= pData[0].lname %>'
+  document.getElementById('email').value = '<%= pData[0].email %>'
+  document.getElementById('street').value = '<%= pData[0].street %>'
+ 
 };</script>
 </html>
